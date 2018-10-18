@@ -32,15 +32,16 @@ class Flower {
       fill(200,0,0);
       ellipse(x,y,r*1.2,r*1.2);
       x = x + moveX;
-      y = y + moveY;
-      
-      if (x <= 0 || x >= width){
+      y = y + moveY; 
+   } 
+  void bounce(){
+    if (x <= 0 || x >= width){
         moveX=-moveX;
       }  
       if (y <= 0 ||  y >= height){
         moveY=-moveY;
       }
-    }  
+  }
 }  
   
   

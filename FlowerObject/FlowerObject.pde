@@ -31,4 +31,7 @@ void draw(){
   flower1.display();
   flower2.display();
   flower3.display();
+  flower1.bounce();
+  flower2.bounce();
+  flower3.bounce();
 }
