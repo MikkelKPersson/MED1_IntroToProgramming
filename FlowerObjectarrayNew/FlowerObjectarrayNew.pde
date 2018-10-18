@@ -19,7 +19,7 @@ void setup() {
   //float stepHalf=step/2;
 
   for (int i = 0; i<n_flowers; i +=1) {
-    FlowerRow[i] = new Flower (_r1, _pedals, fSpace*(i+.5), _y, _pedalColor);
+    FlowerRow[i] = new Flower (_r1+random(-3,5), _pedals+int(random(-3,3)), fSpace*(i+.5), _y, _pedalColor);
 //flower1 = new Flower(_r1, _pedals, _x, _y, _pedalColor);
     // flower2 = new Flower(_r1,_pedals,_x2,_y,_pedalColor,_moveX2,_moveY2);
     // flower3 = new Flower(_r1,_pedals,_x3,_y,_pedalColor,_moveX3,_moveY3);
