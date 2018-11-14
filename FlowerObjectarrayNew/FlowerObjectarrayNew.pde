@@ -4,7 +4,6 @@ Flower flower1;
 void setup() {
   size(1600, 800);
 
-
   int _r1=60;
   int _pedals =7;
   float _x=width/2;
