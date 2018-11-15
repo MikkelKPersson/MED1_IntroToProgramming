@@ -7,10 +7,10 @@ int indexPosition = 0;
 int randPos=40;
 
 void setup(){
-  size(500,1000);
+  size(1000,1000);
 Woman=new Woman();
-Tue=loadImage("Tue.jpg");
-frameRate(25);
+Tue=loadImage("Tue.png");
+frameRate(24);
 }
 
 void draw(){
@@ -25,5 +25,5 @@ for(int i = 0; i < num-1; i++){             //i should be 0 and not indexPositio
                                             //% (module) set the beforewritten back to the beginning (num)
  Woman.display(200, int(x[pos]+random(-randPos,randPos)), int((y[pos])+random(-randPos,randPos)));    //displaying the Mickey, with the parameters to follow the for loop (i) and the mouse (x and y pos)
 }
-image(Tue,mouseX-50,mouseY-100, 100,150);
+image(Tue,mouseX-50,mouseY-100, 150,200);
 }
