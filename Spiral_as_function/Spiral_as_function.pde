@@ -12,9 +12,12 @@ fullScreen();
 background(255);
 }
 void draw() {
+  drawSpiral(0.01,0.1);
 
+}
 
-  for(int i=0;i<5000;i++){
+void drawSpiral(float theta_offset,float radius_offset){
+  for(int i=0;i<500;i++){
 
   float midX=width/2;
   float midY=height/2;
@@ -28,10 +31,10 @@ fill(cos(theta1)*100+155,cos(theta2)*100+155,(cos(theta3))*100+155);
 ellipse(x + midX, y + midY, noise(r)*50, noise(r)*50); 
 // Increment the angle
 
-theta1 += 0.01;
-theta2 += 0.01;
-theta3 += 0.01;
-r += 0.1;
+theta1 += theta_offset;
+theta2 += theta_offset;
+theta3 += theta_offset;
+r += radius_offset;
   }
-noLoop();
+
 }
