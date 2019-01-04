@@ -22,8 +22,8 @@ void draw() {
 float x = r * -cos(theta1);
 float y = r * sin(theta1);
 noStroke();
-fill(cos(theta1)*100+155,cos(theta2)*100+155,(cos(theta3))*100+155);
-//fill(cos(theta1)*100+155,cos(theta1)*100+155,255);
+//fill(cos(theta1)*100+155,cos(theta2)*100+155,(cos(theta3))*100+155);
+fill(cos(theta1)*100+155,cos(theta1)*100+155,255);
 
 ellipse(x + midX, y + midY, noise(r)*50, noise(r)*50); 
 // Increment the angle

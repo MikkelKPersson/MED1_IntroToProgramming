@@ -6,8 +6,8 @@ class Flower {
   float x;       //x-position of the center of the flower
   float y;       //y-position of the center of the flower
   int pedalColor;// color of flower
-  int moveX;    //movement of flower
-  int moveY;    //movement of flower
+  float moveX=(random(-1,1));    //movement of flower
+  float moveY=(random(-1,1));    //movement of flower
   
   Flower(float temp_r, int temp_n_pedals, float temp_x, float temp_y, int temp_pedalColor) {
     r=temp_r;
@@ -15,12 +15,13 @@ class Flower {
     x=temp_x;
     y=temp_y;
     pedalColor=temp_pedalColor;
+
   }
   
   void display() {
     float ballX;
     float ballY;
-      
+
       fill(pedalColor);
       for (float i=0;i<PI*2;i+=2*PI/n_pedals) {
         ballX = x + r*cos(i);
@@ -31,7 +32,15 @@ class Flower {
       ellipse(x,y,r*1.2,r*1.2);
       x = x + moveX;
       y = y + moveY; 
+
    } 
+void move(){
+
+  x+=moveX;
+  y+=moveY;
+  
+}
+     
   void bounce(){
     if (x <= 0 || x >= width){
         moveX=-moveX;

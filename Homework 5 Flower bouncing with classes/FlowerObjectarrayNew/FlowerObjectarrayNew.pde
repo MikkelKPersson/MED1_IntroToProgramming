@@ -29,7 +29,9 @@ void draw() {
   background(#43AF76);
   for (int i = 0; i<n_flowers; i +=1) {
     FlowerRow[i].display();
-   
+    FlowerRow[i].move();
+    FlowerRow[i].bounce();
+ 
   }
 
   //  flower1.display();
